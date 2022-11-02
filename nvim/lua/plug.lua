@@ -25,9 +25,10 @@ return require('packer').startup(function(use)
   -- [[Buffer Management]]
   use 'matbme/JABS.nvim'
   -- [[Dev]]
+  use 'nvim-lua/plenary.nvim'
+  use 'BurntSushi/ripgrep'
   use {
     'nvim-telescope/telescope.nvim',                 -- fuzzy finder
-    requires = { {'nvim-lua/plenary.nvim'} }
   }
   use { 'majutsushi/tagbar' }                        -- code structure
   use { 'Yggdroot/indentLine' }                      -- see indentation
