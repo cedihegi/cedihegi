@@ -20,6 +20,8 @@ require('lualine').setup {
     theme = 'dracula-nvim'
   }
 }
+
+require('Comment').setup()
 require('nvim-autopairs').setup{} -- Add this line
 require('jabs_setup')
 

@@ -35,6 +35,13 @@ return require('packer').startup(function(use)
   use { 'junegunn/gv.vim' }                          -- commit history
   use { 'windwp/nvim-autopairs' }                    -- auto close brackets
 
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
+
   -- [[Rust stuff]]
   use { 'williamboman/mason.nvim' }  
   use { 'williamboman/mason-lspconfig.nvim' }
