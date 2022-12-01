@@ -43,6 +43,7 @@ return require('packer').startup(function(use)
       end
   }
 
+  
   -- [[Rust stuff]]
   use { 'williamboman/mason.nvim' }  
   use { 'williamboman/mason-lspconfig.nvim' }
@@ -59,10 +60,15 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'hrsh7th/cmp-vsnip'                             
+  use 'saadparwaiz1/cmp_luasnip'
   use 'hrsh7th/cmp-path'                              
   use 'hrsh7th/cmp-buffer'                            
   use 'hrsh7th/vim-vsnip'   
 
+  use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
+
+  use 'VonHeikemen/lsp-zero.nvim'
 
   -- [[Theme]]
   use { 'mhinz/vim-startify' }                       -- start screen
