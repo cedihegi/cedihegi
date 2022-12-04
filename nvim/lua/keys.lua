@@ -26,3 +26,13 @@ map('n', '<leader>s', [[:Telescope live_grep<cr>]], {})
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
 
 
+-- moving between views:
+map('n', "<leader>w", '<C-w>', {})
+
+-- moving vertically:
+map('n', "<C-d>", "<C-d>zz", {})
+map('n', "<C-u>", "<C-u>zz", {})
+map('n', "n", "nzz", {})
+map('n', "N", "Nzz", {})
+
+map('n', " ", [[:nohlsearch<cr>]], {})
