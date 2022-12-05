@@ -17,7 +17,7 @@ require('plug')      -- Plugins
 require('nvim-tree').setup{}
 require('lualine').setup {
   options = {
-    theme = 'dracula'
+    theme = 'material'
   }
 }
 
@@ -29,6 +29,7 @@ require("mason").setup()
 
 -- Setting up rust tools
 local lsp = require('lsp-zero')
+-- lsp.nvim_workspace()
 lsp.preset('recommended')
 
 
@@ -46,6 +47,7 @@ lsp.setup()
 --     end,
 --   },
 -- })
+
 
 -- LSP Diagnostics Options Setup 
 local sign = function(opts)

@@ -24,7 +24,7 @@ map('n', '<leader>g', [[:Telescope find_files<cr>]], {})
 map('n', '<leader>s', [[:Telescope live_grep<cr>]], {})
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 -- moving between views:
 map('n', "<leader>w", '<C-w>', {})

@@ -22,14 +22,14 @@ return require('packer').startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons'        -- filesystem icons
   }
 
+  use 'rainbowhxch/beacon.nvim'
+
   -- [[Buffer Management]]
   use 'matbme/JABS.nvim'
   -- [[Dev]]
   use 'nvim-lua/plenary.nvim'
   use 'BurntSushi/ripgrep'
-  use {
-    'nvim-telescope/telescope.nvim',                 -- fuzzy finder
-  }
+  use 'nvim-telescope/telescope.nvim'                 -- fuzzy finder
   use { 'majutsushi/tagbar' }                        -- code structure
   use { 'Yggdroot/indentLine' }                      -- see indentation
   use { 'tpope/vim-fugitive' }                       -- git integration
@@ -43,15 +43,14 @@ return require('packer').startup(function(use)
       end
   }
 
-  
   -- [[Rust stuff]]
-  use { 'williamboman/mason.nvim' }  
+  use { 'williamboman/mason.nvim' }
   use { 'williamboman/mason-lspconfig.nvim' }
-  use 'neovim/nvim-lspconfig' 
+  use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
-  
+
   -- Completion framework:
-  use 'hrsh7th/nvim-cmp' 
+  use 'hrsh7th/nvim-cmp'
 
   -- LSP completion source:
   use 'hrsh7th/cmp-nvim-lsp'
@@ -59,11 +58,11 @@ return require('packer').startup(function(use)
   -- Useful completion sources:
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
-  use 'hrsh7th/cmp-vsnip'                             
+  use 'hrsh7th/cmp-vsnip'
   use 'saadparwaiz1/cmp_luasnip'
-  use 'hrsh7th/cmp-path'                              
-  use 'hrsh7th/cmp-buffer'                            
-  use 'hrsh7th/vim-vsnip'   
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/vim-vsnip'
 
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
@@ -79,6 +78,7 @@ return require('packer').startup(function(use)
   }
   use { 'Mofiqul/dracula.nvim' }                     -- colorschemeuse
   use 'Yazeed1s/oh-lucy.nvim'
+  use 'marko-cerovac/material.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
