@@ -17,7 +17,7 @@ require('plug')      -- Plugins
 require('nvim-tree').setup{}
 require('lualine').setup {
   options = {
-    theme = 'material'
+    theme = 'onedark-nvim'
   }
 }
 

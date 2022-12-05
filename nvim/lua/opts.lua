@@ -17,8 +17,7 @@ opt.fileencoding = 'utf8'        -- str:  File encoding to use
 opt.syntax = "ON"                -- str:  Allow syntax highlighting
 opt.termguicolors = true         -- bool: If term supports ui color then enable
 
-vim.g.material_style = "darker"
-cmd('colorscheme material') 	 -- cmd: Set the color scheme
+cmd('colorscheme onedark') 	 -- cmd: Set the color scheme
 
 -- [[ Search ]]
 opt.ignorecase = true            -- bool: Ignore case in search patterns

@@ -79,6 +79,7 @@ return require('packer').startup(function(use)
   use { 'Mofiqul/dracula.nvim' }                     -- colorschemeuse
   use 'Yazeed1s/oh-lucy.nvim'
   use 'marko-cerovac/material.nvim'
+  use 'ful1e5/onedark.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
