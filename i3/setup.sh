@@ -4,9 +4,7 @@
 # install i3 gaps
 sudo apt update
 
-sudo add-apt-repository -y ppa:regolith-linux/stable
 
-sudo apt install i3-gaps
 sudo apt install i3
 sudo apt install feh
 sudo apt install fonts-powerline 
