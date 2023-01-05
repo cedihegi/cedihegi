@@ -11,8 +11,8 @@ opt.cursorline = true
 opt.autoread = true 
 
 -- use spaces for tabs and whatnot
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.shiftwidth = 4
 opt.shiftround = true
 opt.expandtab = true
 

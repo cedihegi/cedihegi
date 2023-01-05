@@ -7,7 +7,7 @@ cmp.setup({
         vim.fn["vsnip#anonymous"](args.body)
     end,
   },
-  mapping = {
+  mapping = cmp.mapping.preset.insert({
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-n>'] = cmp.mapping.select_next_item(),
     -- Add tab support
@@ -18,10 +18,9 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Insert,
-      select = true,
+      select = false,
     })
-  },
+  }),
   -- Installed sources:
   sources = {
     { name = 'path' },                              -- file paths
@@ -49,4 +48,16 @@ cmp.setup({
           return item
       end,
   },
+  -- disable autocompletion in comments
+  enabled = function()
+    -- disable completion in comments
+    local context = require 'cmp.config.context'
+    -- keep command mode completion enabled when cursor is in a comment
+    if vim.api.nvim_get_mode().mode == 'c' then
+      return true
+    else
+      return not context.in_treesitter_capture("comment") 
+        and not context.in_syntax_group("Comment")
+    end
+  end
 })
