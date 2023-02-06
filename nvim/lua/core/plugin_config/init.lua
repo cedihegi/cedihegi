@@ -12,3 +12,4 @@ require "core.plugin_config.autopairs"
 -- require("core.plugin_config.bufferline")
 require "core.plugin_config.completion"
 require "core.plugin_config.undotree"
+require "core.plugin_config.tagbar"

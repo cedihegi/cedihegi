@@ -13,3 +13,7 @@ map('n', "n", "nzz", {})
 map('n', "N", "Nzz", {})
 
 map('n', " ", [[:nohlsearch<cr>]], {})
+
+map("v", "J", ":m '>+1<CR>gv=gv", {})
+map("v", "K", ":m '<-2<CR>gv=gv", {})
+

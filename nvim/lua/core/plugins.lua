@@ -16,8 +16,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- filetree
-    use 'kyazdani42/nvim-web-devicons' -- displaying nvim tree correctly
-    use 'kyazdani42/nvim-tree.lua'
+    use 'nvim-tree/nvim-web-devicons' -- displaying nvim tree correctly
+    use 'nvim-tree/nvim-tree.lua'
 
     -- lualine
     use 'nvim-lualine/lualine.nvim'                     -- statusline
@@ -41,7 +41,7 @@ return require('packer').startup(function(use)
     use 'mbbill/undotree'
 
     -- General:
-    use 'majutsushi/tagbar'                        -- code structure
+    use 'matjutsushi/tagbar'                        -- code structure
     use 'tpope/vim-fugitive'                       -- git integration
     use 'junegunn/gv.vim'                         -- commit history
     use 'windwp/nvim-autopairs'                    -- auto close brackets
@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
     use 'marko-cerovac/material.nvim'
     use 'ful1e5/onedark.nvim'
     use 'reedes/vim-colors-pencil'
+
 
     -- LSP:
     use 'VonHeikemen/lsp-zero.nvim'
@@ -83,9 +84,6 @@ return require('packer').startup(function(use)
 
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
-
-    -- Formatting
-    use 'sbdchd/neoformat'
 
     -- Automatically set up your configuration after cloning packer.nvim
     if packer_bootstrap then
