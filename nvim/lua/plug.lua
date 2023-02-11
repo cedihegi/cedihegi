@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'BurntSushi/ripgrep'
   use 'nvim-telescope/telescope.nvim'                 -- fuzzy finder
-  use { 'majutsushi/tagbar' }                        -- code structure
+  use { 'preservim/tagbar' }                        -- code structure
   use { 'Yggdroot/indentLine' }                      -- see indentation
   use { 'tpope/vim-fugitive' }                       -- git integration
   use { 'junegunn/gv.vim' }                          -- commit history
