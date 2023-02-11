@@ -1,0 +1,17 @@
+just a file so I will remember all the necessary steps to get this config running on another pc
+
+necessary for i3-gaps I think?: double check
+-  sudo add-apt-repository -y ppa:regolith-linux/stable
+
+- i3-gaps
+- i3
+- feh
+- fonts-powerline 
+- lxpolkit
+- unclutter
+- xclip
+- maim
+
+we also need bumblebee to be installed!
+For the status line we need bumblebee
+https://github.com/tobi-wan-kenobi/bumblebee-status.git ~/Sources/bumblebee-status
