@@ -41,7 +41,7 @@ return require('packer').startup(function(use)
     use 'mbbill/undotree'
 
     -- General:
-    use 'matjutsushi/tagbar'                        -- code structure
+    use 'preservim/tagbar'                        -- code structure
     use 'tpope/vim-fugitive'                       -- git integration
     use 'junegunn/gv.vim'                         -- commit history
     use 'windwp/nvim-autopairs'                    -- auto close brackets
