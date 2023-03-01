@@ -2,7 +2,7 @@ local cmp = require'cmp'
 
 cmp.setup({
   -- Enable LSP snippets
-  preselect = cmp.PreselectMode.None,
+  -- preselect = cmp.PreselectMode.None,
   snippet = {
     expand = function(args)
         vim.fn["vsnip#anonymous"](args.body)
@@ -29,7 +29,7 @@ cmp.setup({
     { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
     { name = 'nvim_lua', keyword_length = 2},       -- complete neovim's Lua runtime API such vim.lsp.*
     { name = 'buffer', keyword_length = 2 },        -- source current buffer
-    { name = 'vsnip', keyword_length = 2 },         -- nvim-cmp source for vim-vsnip 
+    { name = 'vsnip', keyword_length = 2 },         -- nvim-cmp source for vim-vsnip
     { name = 'calc'},                               -- source for math calculation
   },
   window = {
@@ -49,6 +49,9 @@ cmp.setup({
           return item
       end,
   },
+  completion = {
+      completeopt = 'menu,menuone,noselect',
+  },
   -- disable autocompletion in comments
   enabled = function()
     -- disable completion in comments
@@ -57,7 +60,7 @@ cmp.setup({
     if vim.api.nvim_get_mode().mode == 'c' then
       return true
     else
-      return not context.in_treesitter_capture("comment") 
+      return not context.in_treesitter_capture("comment")
         and not context.in_syntax_group("Comment")
     end
   end

@@ -2,15 +2,16 @@ vim.opt.signcolumn = 'yes' -- Reserve space for diagnostic icons
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
-lsp.configure('pylsp', {
-  settings = {
-    pylsp = {
-      plugins = {
-        pycodestyle = {enabled = false},
-      },
-    },
-  },
-})
+-- re-enable if working on a project with lots of style warnings
+-- lsp.configure('pylsp', {
+--   settings = {
+--     pylsp = {
+--       plugins = {
+--         pycodestyle = {enabled = false},
+--       },
+--     },
+--   },
+-- })
 
 lsp.nvim_workspace()
 

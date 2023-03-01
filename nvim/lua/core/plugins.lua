@@ -46,7 +46,8 @@ return require('packer').startup(function(use)
     use 'junegunn/gv.vim'                         -- commit history
     use 'windwp/nvim-autopairs'                    -- auto close brackets
     use 'rainbowhxch/beacon.nvim'
-    use 'tpope/vim-surround'
+    use 'echasnovski/mini.surround'
+    use 'ntpeters/vim-better-whitespace'
 
     -- Themes:
     use 'Mofiqul/dracula.nvim'                     -- colorschemeuse
@@ -54,7 +55,9 @@ return require('packer').startup(function(use)
     use 'marko-cerovac/material.nvim'
     use 'ful1e5/onedark.nvim'
     use 'reedes/vim-colors-pencil'
-
+    use 'tomasr/molokai'
+    use 'morhetz/gruvbox'
+    use 'EdenEast/nightfox.nvim'
 
     -- LSP:
     use 'VonHeikemen/lsp-zero.nvim'
@@ -64,6 +67,8 @@ return require('packer').startup(function(use)
       'neovim/nvim-lspconfig',
     }
     use 'nvim-lua/lsp-status.nvim'
+    use 'jose-elias-alvarez/null-ls.nvim'
+    use 'MunifTanjim/prettier.nvim'
     -- specifically for rust for some reason:
     -- use 'simrat39/rust-tools.nvim'
 
