@@ -6,7 +6,7 @@
 set $mod Mod4
 
 # is used in the bar {} block below.
-# font pango:monospace 8 
+# font pango:monospace 8
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
@@ -42,7 +42,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+q kill 
+bindsym $mod+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -185,7 +185,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # custom stuff:
-# disable titlebar for i3-gaps to work 
+# disable titlebar for i3-gaps to work
 for_window [class="^.*"] border pixel 2
 client.focused          #00ffff #285577 #ffffff #2e9ef4   #00ffff
 
@@ -197,13 +197,14 @@ exec_always --no-startup-id "setxkbmap -option caps:escape_shifted_capslock"
 exec_always --no-startup-id "setxkbmap -option grp:alt_shift_toggle us,ch"
 
 # start picom for transparency:
-# exec_always --no-startup-id compton 
+# exec_always --no-startup-id compton
 # --config ~/.config/picom/config
 
 # lxpolkit allows us to use apps like gnome-software, even when a login is required
 exec --no-startup-id lxpolkit
 # unclutter will make the mouse disappear after a certain amount of time
-exec --no-startup-id unclutter
+# however this has side effects that are annoying
+# exec --no-startup-id unclutter
 
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date).png"

@@ -8,7 +8,8 @@ require "core.plugin_config.lsp-zero"
 -- require("core.plugin_config.jabs")
 require "core.plugin_config.comment"
 require "core.plugin_config.autopairs"
--- require("core.plugin_config.rust-tools")
+require "core.plugin_config.dap"
+require("core.plugin_config.rust-tools")
 -- require("core.plugin_config.bufferline")
 require "core.plugin_config.completion"
 require "core.plugin_config.undotree"
