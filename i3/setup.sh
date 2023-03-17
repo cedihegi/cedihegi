@@ -5,7 +5,9 @@
 sudo apt update
 
 
-sudo apt install i3 feh fonts-powerline lxpolkit maim xclip
+sudo apt install i3
+sudo apt install feh
+sudo apt install fonts-powerline
 
 # we also need bumblebee to be installed!
 echo "Cloning Bumblebee into ~/Sources/bumblebee-status"

@@ -23,15 +23,38 @@ bindsym $mod+Escape exec --no-startup-id "i3lock -i ~/Pictures/Wallpapers/blured
 exec --no-startup-id nm-applet
 
 # load the screen-settings:
-exec --no-startup-id bash .screenlayout/gnome.sh
 exec --no-startup-id owncloud
+exec --no-startup-id bash /home/$USER/.config/i3/execute.sh
+# these 2 commands might have a race condition
+
+# gaps inner 10
+# gaps outer 10
 
 
+# start picom for transparency:
+# exec_always --no-startup-id compton
+# --config ~/.config/picom/config
+
+# lxpolkit allows us to use apps like gnome-software, even when a login is required
+exec --no-startup-id lxpolkit
+# unclutter will make the mouse disappear after a certain amount of time
+# however this has side effects that are annoying
+# exec --no-startup-id unclutter
+
+## Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date).png"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date).png"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(date '+%F-%T').png"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+# set $refresh_i3status killall -SIGUSR1 i3status
+bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym $mod+F10 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -189,32 +212,6 @@ bindsym $mod+r mode "resize"
 for_window [class="^.*"] border pixel 2
 client.focused          #00ffff #285577 #ffffff #2e9ef4   #00ffff
 
-# gaps inner 10
-# gaps outer 10
-
-# switch caps lock and escape:
-exec_always --no-startup-id "setxkbmap -option caps:escape_shifted_capslock"
-exec_always --no-startup-id "setxkbmap -option grp:alt_shift_toggle us,ch"
-
-# start picom for transparency:
-# exec_always --no-startup-id compton
-# --config ~/.config/picom/config
-
-# lxpolkit allows us to use apps like gnome-software, even when a login is required
-exec --no-startup-id lxpolkit
-# unclutter will make the mouse disappear after a certain amount of time
-# however this has side effects that are annoying
-# exec --no-startup-id unclutter
-
-## Screenshots
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date).png"
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date).png"
-bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(date '+%F-%T').png"
-
-## Clipboard Screenshots
-bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
-bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 
 
@@ -243,4 +240,3 @@ bar {
 }
 
 
-exec_always --no-startup-id feh --bg-scale /home/cedric/Pictures/Wallpapers/surfing2.jpg --bg-scale /home/cedric/Pictures/Wallpapers/vertical-rose.jpeg
