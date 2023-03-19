@@ -1,8 +1,12 @@
 # some commands were not actually executed sometimes.. well no longer
 
 
-bash /home/cedric/.screenlayout/gnome.sh
-feh --bg-scale /home/cedric/Pictures/Wallpapers/surfing2.jpg --bg-scale /home/cedric/Pictures/Wallpapers/vertical-rose.jpeg
+# no need on laptop..
+# bash /home/cedric/.screenlayout/gnome.sh
+
+# only one screen on laptop
+# feh --bg-scale /home/cedric/Pictures/Wallpapers/surfing2.jpg --bg-scale /home/cedric/Pictures/Wallpapers/vertical-rose.jpeg
+exec_always --no-startup-id feh --bg-scale /home/cedric/Pictures/wallpaper.jpg
 
 
 # switch caps lock and escape:
