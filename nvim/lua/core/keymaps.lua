@@ -16,3 +16,5 @@ map('n', " ", [[:nohlsearch<cr>]], {})
 
 map("v", "J", ":m '>+1<CR>gv=gv", {})
 map("v", "K", ":m '<-2<CR>gv=gv", {})
+
+map("t", "<Esc>", "<C-\\><C-n>", {})

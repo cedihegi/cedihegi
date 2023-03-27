@@ -62,6 +62,12 @@ return require('packer').startup(function(use)
     use 'morhetz/gruvbox'
     use 'EdenEast/nightfox.nvim'
 
+    -- Debugging
+    use 'simrat39/rust-tools.nvim'
+    use 'mfussenegger/nvim-dap'
+    use 'rcarriga/nvim-dap-ui'
+    use 'nvim-telescope/telescope-dap.nvim'
+
     -- LSP:
     use 'VonHeikemen/lsp-zero.nvim'
     use {
@@ -73,7 +79,6 @@ return require('packer').startup(function(use)
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'MunifTanjim/prettier.nvim'
     -- specifically for rust for some reason:
-    -- use 'simrat39/rust-tools.nvim'
 
     -- Autocompletion
     -- Completion framework:
