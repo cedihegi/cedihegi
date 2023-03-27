@@ -41,6 +41,9 @@ return require('packer').startup(function(use)
     use 'mbbill/undotree'
 
     -- General:
+    use "lukas-reineke/indent-blankline.nvim"
+
+    use 'rcarriga/nvim-notify'
     use 'preservim/tagbar'                        -- code structure
     use 'tpope/vim-fugitive'                       -- git integration
     use 'junegunn/gv.vim'                         -- commit history

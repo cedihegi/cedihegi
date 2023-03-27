@@ -41,11 +41,11 @@ lsp.setup()
 -- Diagnostics:
 
 local sign = function(opts)
-  vim.fn.sign_define(opts.name, {
-    texthl = opts.name,
-    text = opts.text,
-    numhl = ''
-  })
+    vim.fn.sign_define(opts.name, {
+        texthl = opts.name,
+        text = opts.text,
+        numhl = ''
+    })
 end
 
 sign({name = 'DiagnosticSignError', text = ''})

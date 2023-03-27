@@ -23,3 +23,6 @@ opt.laststatus = 2
 opt.autowrite = true
 opt.cursorline = true
 opt.autoread = true
+
+
+opt.termguicolors = true         -- bool: If term supports ui color then enable
