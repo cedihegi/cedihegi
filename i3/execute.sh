@@ -6,8 +6,7 @@
 
 # only one screen on laptop
 # feh --bg-scale /home/cedric/Pictures/Wallpapers/surfing2.jpg --bg-scale /home/cedric/Pictures/Wallpapers/vertical-rose.jpeg
-exec_always --no-startup-id feh --bg-scale /home/cedric/Pictures/wallpaper.jpg
-
+feh --bg-scale /home/cedric/Pictures/Wallpapers/wallpaper.jpg
 
 # switch caps lock and escape:
 setxkbmap -option caps:escape_shifted_capslock

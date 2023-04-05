@@ -25,7 +25,6 @@ exec --no-startup-id nm-applet
 # load the screen-settings:
 exec --no-startup-id owncloud
 exec --no-startup-id bash /home/$USER/.config/i3/execute.sh
-# these 2 commands might have a race condition
 
 # gaps inner 10
 # gaps outer 10
@@ -70,7 +69,7 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -215,28 +214,24 @@ bindsym $mod+r mode "resize"
 for_window [class="^.*"] border pixel 2
 client.focused          #00ffff #285577 #ffffff #2e9ef4   #00ffff
 
-
-
-
 # Status bar on each screen:
-
+# bar {
+#     position top
+#     font pango:DejaVu Sans Mono, FontAwesome 10
+#     output HDMI-A-2
+# 	tray_output none
+# 	status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
+#         -m date time \
+#         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
+#         -t dracula-powerline
+# }
 bar {
     position top
-    font pango:DejaVu Sans Mono, FontAwesome 10
-    output HDMI-A-2
-	tray_output none
-	status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
-        -m date time \
-        -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
-        -t dracula-powerline
-}
-bar {
-    position top
-    output DisplayPort-0
+    # output DisplayPort-0
     font pango:DejaVu Sans Mono, FontAwesome 10
 	tray_output none
 	status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
-        -m layout-xkb cpu \
+        -m layout-xkb cpu battery\
 		memory pasink pasource date time \
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
         -t dracula-powerline
