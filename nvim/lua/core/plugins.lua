@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
         {'BurntSushi/ripgrep'}
       },
     }
+    use 'lervag/vimtex'
 
     -- Buffer Management:
     -- use 'matbme/JABS.nvim'
@@ -61,6 +62,7 @@ return require('packer').startup(function(use)
     use 'tomasr/molokai'
     use 'morhetz/gruvbox'
     use 'EdenEast/nightfox.nvim'
+    use 'catppuccin/nvim'
 
     -- Debugging
     use 'simrat39/rust-tools.nvim'

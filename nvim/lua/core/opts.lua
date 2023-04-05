@@ -26,3 +26,4 @@ opt.autoread = true
 
 
 opt.termguicolors = true         -- bool: If term supports ui color then enable
+opt.guifont = "DejaVu Sans Mono:h13"
