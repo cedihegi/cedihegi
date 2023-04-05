@@ -49,6 +49,8 @@ local function close_nvim_ide_panels()
             ws.close_panel(require('ide.panels.panel').PANEL_POS_RIGHT)
         end
     end
+    vim.cmd.NvimTreeClose()
+    vim.cmd.TagbarClose()
 end
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
