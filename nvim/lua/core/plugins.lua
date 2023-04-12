@@ -44,12 +44,10 @@ return require('packer').startup(function(use)
     -- General:
     use "lukas-reineke/indent-blankline.nvim"
 
-    use 'rcarriga/nvim-notify'
     use 'preservim/tagbar'                        -- code structure
     use 'tpope/vim-fugitive'                       -- git integration
     use 'junegunn/gv.vim'                         -- commit history
     use 'windwp/nvim-autopairs'                    -- auto close brackets
-    use 'rainbowhxch/beacon.nvim'
     use 'echasnovski/mini.surround'
     use 'ntpeters/vim-better-whitespace'
 
