@@ -50,7 +50,7 @@ cmp.setup({
       end,
   },
   completion = {
-      completeopt = 'menu,menuone,noselect',
+      completeopt = 'noselect',
   },
   -- disable autocompletion in comments
   enabled = function()
