@@ -16,7 +16,7 @@ font pango:DejaVu Sans Mono 8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-bindsym $mod+Escape exec --no-startup-id "i3lock -i ~/Pictures/Wallpapers/blured_surfing2.png -p default -d -n"
+bindsym $mod+Escape exec --no-startup-id "i3lock -i ~/Pictures/Wallpapers/blured_surfing2.png -p default -d -n"; exec systemctl suspend;
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -27,8 +27,8 @@ exec --no-startup-id owncloud
 exec --no-startup-id bash /home/$USER/.config/i3/execute.sh
 # these 2 commands might have a race condition
 
-# gaps inner 10
-# gaps outer 10
+# gaps inner 5
+# gaps outer 5
 
 
 # start picom for transparency:
@@ -70,7 +70,7 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -228,7 +228,11 @@ bar {
 	status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
         -m date time \
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
+<<<<<<< HEAD
         -t dracula-powerline
+=======
+        -t solarized
+>>>>>>> e9c7556787136f059c2bd26ad63c996ade163cf9
 }
 bar {
     position top
@@ -236,10 +240,14 @@ bar {
     font pango:DejaVu Sans Mono, FontAwesome 10
 	tray_output none
 	status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
-        -m layout-xkb cpu \
+        -m layout-xkb cpu disk\
 		memory pasink pasource date time \
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
+<<<<<<< HEAD
         -t dracula-powerline
+=======
+        -t solarized
+>>>>>>> e9c7556787136f059c2bd26ad63c996ade163cf9
 }
 
 

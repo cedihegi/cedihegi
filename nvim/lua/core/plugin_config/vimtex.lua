@@ -10,3 +10,7 @@ vim.g.vimtex_compiler_latexmk = {
         '-shell-escape',
     },
 }
+
+vim.g.vimtex_quickfix_ignore_filters = {
+    '.*LaTeX hooks Warning: Generic hook.*'
+}
