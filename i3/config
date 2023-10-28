@@ -139,17 +139,17 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# assign workspaces to screens:
-workspace $ws1 output DisplayPort-0
-workspace $ws2 output DisplayPort-0 
-workspace $ws3 output DisplayPort-0
-workspace $ws4 output DisplayPort-0 
-workspace $ws5 output DisplayPort-0
-workspace $ws6 output DisplayPort-0
-workspace $ws7 output HDMI-A-2
-workspace $ws8 output HDMI-A-2 
-workspace $ws9 output HDMI-A-2
-workspace $ws10 output HDMI-A-2 
+# # assign workspaces to screens:
+# workspace $ws1 output DisplayPort-0
+# workspace $ws2 output DisplayPort-0 
+# workspace $ws3 output DisplayPort-0
+# workspace $ws4 output DisplayPort-0 
+# workspace $ws5 output DisplayPort-0
+# workspace $ws6 output DisplayPort-0
+# workspace $ws7 output HDMI-A-2
+# workspace $ws8 output HDMI-A-2 
+# workspace $ws9 output HDMI-A-2
+# workspace $ws10 output HDMI-A-2 
 
 
 # switch to workspace
@@ -219,35 +219,15 @@ client.focused          #00ffff #285577 #ffffff #2e9ef4   #00ffff
 
 
 # Status bar on each screen:
-
 bar {
     position top
-    font pango:DejaVu Sans Mono, FontAwesome 10
-    output HDMI-A-2
-	tray_output none
-	status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
-        -m date time \
-        -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
-<<<<<<< HEAD
-        -t dracula-powerline
-=======
-        -t solarized
->>>>>>> e9c7556787136f059c2bd26ad63c996ade163cf9
-}
-bar {
-    position top
-    output DisplayPort-0
     font pango:DejaVu Sans Mono, FontAwesome 10
 	tray_output none
 	status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
         -m layout-xkb cpu disk\
-		memory pasink pasource date time \
+		memory battery-upower pasink pasource date time \
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
-<<<<<<< HEAD
-        -t dracula-powerline
-=======
         -t solarized
->>>>>>> e9c7556787136f059c2bd26ad63c996ade163cf9
 }
 
 

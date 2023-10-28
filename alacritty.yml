@@ -6,17 +6,17 @@ window:
     x: 10 
     y: 5
   class:
-    instance: Alacritty
+    instance: Alacritty 
     general: Alacritty
   opacity: 0.95
 
 font:
-  size: 14
+  size: 8
   normal:
-    family: Hurmit Nerd Font Mono 
+    family: FiraCode Nerd Font Mono 
     style: Medium
   bold:
-    family: Hurmit Nerd Font
+    family: FiraCode Nerd Font Mono
     style: bold 
 
 

@@ -13,7 +13,7 @@ lsp.preset('recommended')
 --   },
 -- })
 
-lsp.nvim_workspace()
+-- lsp.nvim_workspace()
 
 
 lsp.setup()
