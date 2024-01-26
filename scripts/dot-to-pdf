@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Check for input argument
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 path_to_dotfile"
+    exit 1
+fi
+
+dotfile="$1"
+
+# Check if input file exists
+if [ ! -f "$dotfile" ]; then
+    echo "File $dotfile not found!"
+    exit 2
+fi
+
+# Extract the basename from the dotfile, and generate a temporary file name for the PDF
+base_name=$(basename "$dotfile" .dot)
+tmp_pdf="/tmp/${base_name}_graphviz_output.pdf"
+
+# Use Graphviz's dot tool to generate a PDF from the dotfile
+dot -Tpdf "$dotfile" -o "$tmp_pdf"
+
+# Check if PDF generation was successful
+if [ $? -ne 0 ]; then
+    echo "Error generating PDF from $dotfile!"
+    exit 3
+fi
+
+# Use xdg-open to open the PDF
+xdg-open "$tmp_pdf"
+
+# Note: Depending on your system configuration and the speed of xdg-open,
+# you might want to add some delay or cleanup mechanism to remove the
+# temporary PDF file after it's been viewed.

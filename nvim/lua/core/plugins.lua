@@ -34,6 +34,8 @@ return require('packer').startup(function(use)
         {'BurntSushi/ripgrep'}
       },
     }
+
+    -- Latex
     use 'lervag/vimtex'
 
     -- Buffer Management:
@@ -48,6 +50,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'                       -- git integration
     use 'junegunn/gv.vim'                         -- commit history
     use 'windwp/nvim-autopairs'                    -- auto close brackets
+    use 'windwp/nvim-ts-autotag'
     use 'echasnovski/mini.surround'
     use 'ntpeters/vim-better-whitespace'
 
@@ -97,6 +100,8 @@ return require('packer').startup(function(use)
 
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
+
+    use 'norcalli/nvim-colorizer.lua'
 
     -- Automatically set up your configuration after cloning packer.nvim
     if packer_bootstrap then

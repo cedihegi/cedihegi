@@ -7,6 +7,7 @@ require "core.plugin_config.lsp-zero"
 -- require("core.plugin_config.jabs")
 require "core.plugin_config.comment"
 require "core.plugin_config.autopairs"
+require "core.plugin_config.autotags"
 require "core.plugin_config.dap"
 require("core.plugin_config.rust-tools")
 -- require("core.plugin_config.bufferline")
@@ -18,3 +19,5 @@ require "core.plugin_config.null-ls"
 require "core.plugin_config.prettier"
 require "core.plugin_config.indentation"
 require "core.plugin_config.vimtex"
+
+require "core.plugin_config.colorizer"
