@@ -24,7 +24,7 @@ exec --no-startup-id nm-applet
 
 # load the screen-settings:
 exec --no-startup-id owncloud
-exec --no-startup-id bash /home/$USER/.config/i3/execute.sh
+exec_always --no-startup-id bash /home/$USER/.config/i3/execute.sh
 # these 2 commands might have a race condition
 
 # gaps inner 5
@@ -215,9 +215,6 @@ bindsym $mod+r mode "resize"
 for_window [class="^.*"] border pixel 2
 client.focused          #00ffff #285577 #ffffff #2e9ef4   #00ffff
 
-
-
-
 # Status bar on each screen:
 
 bar {
@@ -228,11 +225,7 @@ bar {
 	status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
         -m date time \
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
-<<<<<<< HEAD
         -t dracula-powerline
-=======
-        -t solarized
->>>>>>> e9c7556787136f059c2bd26ad63c996ade163cf9
 }
 bar {
     position top
@@ -243,11 +236,7 @@ bar {
         -m layout-xkb cpu disk\
 		memory pasink pasource date time \
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
-<<<<<<< HEAD
         -t dracula-powerline
-=======
-        -t solarized
->>>>>>> e9c7556787136f059c2bd26ad63c996ade163cf9
 }
 
 

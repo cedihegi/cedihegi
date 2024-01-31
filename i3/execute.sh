@@ -1,5 +1,5 @@
-# some commands were not actually executed sometimes.. well no longer
-
+# wait a moment for startup to be over
+sleep 2
 
 bash /home/cedric/.screenlayout/gnome.sh
 feh --bg-scale /home/cedric/Pictures/Wallpapers/surfing2.jpg --bg-scale /home/cedric/Pictures/Wallpapers/vertical-rose.jpeg
