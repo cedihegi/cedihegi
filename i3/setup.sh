@@ -8,6 +8,7 @@ sudo apt update
 sudo apt install i3
 sudo apt install feh
 sudo apt install fonts-powerline
+sudo apt install python3-pip
 
 # we also need bumblebee to be installed!
 echo "Cloning Bumblebee into ~/Sources/bumblebee-status"

@@ -23,8 +23,8 @@ bindsym $mod+Escape exec --no-startup-id "i3lock -i ~/Pictures/Wallpapers/blured
 exec --no-startup-id nm-applet
 
 # load the screen-settings:
-exec --no-startup-id owncloud
-exec --no-startup-id bash /home/$USER/.config/i3/execute.sh
+set $DEBUG_I3 true
+exec_always --no-startup-id export DEBUG_I3=$DEBUG_I3; bash /home/$USER/.config/i3/execute.sh
 # these 2 commands might have a race condition
 
 # gaps inner 5
