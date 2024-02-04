@@ -14,6 +14,7 @@ return {
     -- Git:
     'tpope/vim-fugitive',
     'junegunn/gv.vim',                         -- commit history
+    {'lewis6991/gitsigns.nvim', config=true},
 
     -- auto pairs and tags:
     {'windwp/nvim-autopairs', config=true},
