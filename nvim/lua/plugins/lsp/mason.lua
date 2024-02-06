@@ -12,7 +12,7 @@ return {
             ensure_installed = {
                 "tsserver",
                 "lua_ls",
-                "java_language_server",
+                "jdtls",
             },
             automatic_installation = true,
         })
