@@ -36,5 +36,5 @@ opt.guifont = "DejaVu Sans Mono:h13"
 -- autocommands:
 vim.cmd([[autocmd BufEnter *.pdf execute "!zathura '%' &" | bdelete %]])
 
--- set colorscheme
-vim.cmd("colorscheme catppuccin-mocha")
+-- -- set colorscheme
+-- vim.cmd("colorscheme catppuccin-mocha")

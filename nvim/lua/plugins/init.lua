@@ -8,8 +8,10 @@ return {
     'reedes/vim-colors-pencil',
     'tomasr/molokai',
     'morhetz/gruvbox',
-    'EdenEast/nightfox.nvim',
-    'catppuccin/nvim',
+    {'EdenEast/nightfox.nvim'},
+    {'catppuccin/nvim', config = function()
+        vim.cmd([[colorscheme catppuccin-mocha]])
+    end},
 
     -- Git:
     'tpope/vim-fugitive',
@@ -25,4 +27,6 @@ return {
 
     -- Mark trailing whitespace in strong red
     'ntpeters/vim-better-whitespace',
+
+    {'norcalli/nvim-colorizer.lua', config=true},
 }

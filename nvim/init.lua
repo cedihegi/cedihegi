@@ -17,7 +17,12 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Each named section will get its own config file
 
-require("lazy").setup({{import = "plugins"}, {import = "plugins.lsp"}})
+require("opts")
+require("lazy").setup({{import = "plugins"}, {import = "plugins.lsp"}}, {
+    install = {
+        colorscheme = { "carbonfox" },
+    },
+})
 -- local plugins = {
 --     -- Filetree
 --     {
@@ -46,4 +51,3 @@ require("lazy").setup({{import = "plugins"}, {import = "plugins.lsp"}})
 -- require("lazy").setup(plugins, {})
 
 require("keymaps")
-require("opts")
