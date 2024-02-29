@@ -1,6 +1,10 @@
 vim.g.mapleader = ","
 vim.g.localleader = "\\"
 
+if vim.g.vscode then
+
+
+else
 -- Setup Lazyvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -51,3 +55,4 @@ require("lazy").setup({{import = "plugins"}, {import = "plugins.lsp"}}, {
 -- require("lazy").setup(plugins, {})
 
 require("keymaps")
+end
