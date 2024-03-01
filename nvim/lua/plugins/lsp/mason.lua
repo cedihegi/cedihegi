@@ -10,6 +10,11 @@ return {
         mason.setup()
         mason_lspconfig.setup({
             ensure_installed = {
+                "rust_analyzer",
+                "yamlls",
+                "tsserver",
+                "cssls",
+                "jsonls",
                 "lua_ls",
                 "jdtls",
             },
