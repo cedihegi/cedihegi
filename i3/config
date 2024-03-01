@@ -230,7 +230,7 @@ client.focused          #00ffff #285577 #ffffff #2e9ef4   #00ffff
 bar {
     position top
     font pango:DejaVu Sans Mono, FontAwesome 10
-    # output HDMI-A-2
+    output HDMI-A-2
     tray_output none
     status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
         -m layout-xkb cpu disk\
@@ -239,14 +239,14 @@ bar {
         -t dracula-powerline
 }
 # For the second screen on PC
-# bar {
-#     position top
-#     output DisplayPort-0
-#     font pango:DejaVu Sans Mono, FontAwesome 10
-#     tray_output none
-#     status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
-#         -m layout-xkb cpu disk\
-#         memory pasink pasource date time \
-#         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
-#         -t solarized
-# }
+bar {
+    position top
+    output DisplayPort-0
+    font pango:DejaVu Sans Mono, FontAwesome 10
+    tray_output none
+    status_command /home/cedric/Sources/bumblebee-status/bumblebee-status \
+        -m layout-xkb cpu disk\
+        memory pasink pasource date time \
+        -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
+        -t solarized
+}
