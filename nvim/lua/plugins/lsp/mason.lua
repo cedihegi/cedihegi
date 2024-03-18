@@ -17,6 +17,8 @@ return {
                 "jsonls",
                 "lua_ls",
                 "jdtls",
+                "tailwindcss",
+                "html",
             },
             automatic_installation = true,
         })

@@ -23,10 +23,10 @@ return {
     {'windwp/nvim-ts-autotag', config=true},
 
     -- surround
-    'echasnovski/mini.surround',
+    {'echasnovski/mini.surround', config=true},
 
     -- Mark trailing whitespace in strong red
     'ntpeters/vim-better-whitespace',
 
-    {'norcalli/nvim-colorizer.lua', config=true},
+    {"norcalli/nvim-colorizer.lua", config=true},
 }

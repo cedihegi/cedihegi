@@ -1,6 +1,5 @@
 return {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
     dependencies = {
         -- Useful completion sources:
         'hrsh7th/cmp-nvim-lua',
@@ -14,12 +13,18 @@ return {
         'L3MON4D3/LuaSnip',
         'rafamadriz/friendly-snippets',
     },
-    config = function ()
+    config = function()
         local cmp = require("cmp")
         local luasnip = require("luasnip")
-        require("luasnip.loaders.from_vscode").lazy_load()
+        -- require("luasnip.loaders.from_vscode").lazy_load()
 
         cmp.setup({
+            format = function(_, vim_item)
+                vim_item.menu = ""
+                vim_item.kind = ""
+                return vim_item
+            end,
+            preselect = cmp.PreselectMode.None,
             completion = {
                 completeopt = "menu,menuone,preview,noselect",
             },
@@ -31,19 +36,22 @@ return {
             mapping = cmp.mapping.preset.insert({
                 -- custom key mappings:
                 ["<C-Space>"] = cmp.mapping.complete(),
-                ["<CR>"] = cmp.mapping.confirm({ select = false}),
+                ["<CR>"] = cmp.mapping.confirm({
+                    behavior = cmp.ConfirmBehavior.Replace,
+                    select = false
+                }),
                 ["<TAB>"] = cmp.mapping.select_next_item(),
             }),
 
             sources = cmp.config.sources({
-                { name = 'path' },                              -- file paths
-                { name = 'nvim_lsp', keyword_length = 3 },      -- from language server
-                { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
-                { name = 'nvim_lua', keyword_length = 2},       -- complete neovim's Lua runtime API such vim.lsp.*
-                { name = 'vsnip', keyword_length = 2 },         -- nvim-cmp source for vim-vsnip
+                { name = 'path' },                                       -- file paths
+                { name = 'nvim_lsp',               keyword_length = 3 }, -- from language server
+                { name = 'nvim_lsp_signature_help' },                    -- display function signatures with current parameter emphasized
+                { name = 'nvim_lua',               keyword_length = 2 }, -- complete neovim's Lua runtime API such vim.lsp.*
+                { name = 'vsnip',                  keyword_length = 2 }, -- nvim-cmp source for vim-vsnip
                 { name = "luasnip" },
-                { name = 'buffer', keyword_length = 2 },        -- source current buffer
-                { name = 'calc'},                               -- source for math calculation
+                { name = 'buffer',                 keyword_length = 2 }, -- source current buffer
+                { name = 'calc' },                                       -- source for math calculation
             })
 
         })
