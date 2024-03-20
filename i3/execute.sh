@@ -3,6 +3,7 @@
 
 log() {
     if [[ "$DEBUG_I3" == "true" ]]; then
+        touch ~/script.log
         echo "$(date) - $1" >> ~/script.log
     fi
 }
@@ -10,7 +11,6 @@ log() {
 # wait for system setup
 sleep 2
 
-touch ~/script.log
 log "execute.sh is executed"
 
 bash /home/cedric/.screenlayout/gnome.sh

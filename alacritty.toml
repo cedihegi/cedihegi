@@ -63,14 +63,14 @@ cursor = "CellForeground"
 text = "CellBackground"
 
 [font]
-size = 8
+size = 11
 
 [font.bold]
-family = "FiraCode Nerd Font Mono"
+family = "FiraMono Nerd Font Mono"
 style = "bold"
 
 [font.normal]
-family = "FiraCode Nerd Font Mono"
+family = "FiraMono Nerd Font Mono"
 style = "Medium"
 
 [scrolling]
