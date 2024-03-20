@@ -1,4 +1,3 @@
-
 return {
     'neovim/nvim-lspconfig',
     event = { "BufReadPre", "BufNewFile" },
@@ -6,7 +5,7 @@ return {
         "hrsh7th/cmp-nvim-lsp",
         { "antosha417/nvim-lsp-file-operations", config = true },
     },
-    config = function ()
+    config = function()
         require("plugins.lsp.on_attach")
         local lspconfig = require("lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -66,6 +65,10 @@ return {
             on_attach = on_attach,
         })
         lspconfig["jdtls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+        lspconfig["angularls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })

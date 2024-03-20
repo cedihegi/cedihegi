@@ -29,4 +29,5 @@ return {
     'ntpeters/vim-better-whitespace',
 
     {'norcalli/nvim-colorizer.lua', config=true},
+    {'echasnovski/mini.surround', config=true},
 }

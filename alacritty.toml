@@ -63,7 +63,7 @@ cursor = "CellForeground"
 text = "CellBackground"
 
 [font]
-size = 8
+size = 10
 
 [font.bold]
 family = "FiraCode Nerd Font Mono"
