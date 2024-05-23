@@ -36,6 +36,8 @@ return {
             }
         })
 
+        local data_path = vim.fn.stdpath("data")
+
         lspconfig["rust_analyzer"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
@@ -63,6 +65,7 @@ return {
         lspconfig["jdtls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            -- cmd = { data_path .. '/mason/bin/jdtls' },
         })
         lspconfig["tailwindcss"].setup({
             capabilities = capabilities,
@@ -73,6 +76,10 @@ return {
             on_attach = on_attach,
         })
         lspconfig["angularls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+        lspconfig["lemminx"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
