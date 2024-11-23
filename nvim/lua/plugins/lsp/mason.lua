@@ -16,7 +16,6 @@ return {
                 "cssls",
                 "jsonls",
                 "lua_ls",
-                "jdtls",
                 "tailwindcss",
                 "html",
             },

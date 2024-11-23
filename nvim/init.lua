@@ -28,30 +28,6 @@ if not vim.g.vscode then
         },
     })
 end
--- local plugins = {
---     -- Filetree
---     {
---         'nvim-tree/nvim-tree.lua',
---         dependencies = {
---             "nvim-tree/nvim-web-devicons"
---         }
---     },
---     -- lualine
---     'nvim-lualine/lualine.nvim',                     -- statusline
---     -- code-editing:
---     'numToStr/Comment.nvim',
---     -- Treesitter:
---     'nvim-treesitter/nvim-treesitter',
---
---     -- Telescope
---     {
---       'nvim-telescope/telescope.nvim',
---       dependencies = {
---         'nvim-lua/plenary.nvim',
---         'BurntSushi/ripgrep'
---       },
---     },
--- }
 
 -- require("lazy").setup(plugins, {})
 

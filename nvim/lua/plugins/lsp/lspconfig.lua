@@ -4,6 +4,7 @@ return {
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         { "antosha417/nvim-lsp-file-operations", config = true },
+        -- "nvim-java/nvim-java"
     },
     config = function()
         require("plugins.lsp.on_attach")
@@ -36,11 +37,20 @@ return {
             }
         })
 
-        local data_path = vim.fn.stdpath("data")
 
         lspconfig["rust_analyzer"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
+            settings = {
+                procMacro = {
+                    ignored = {
+                        leptos_macro = {
+                            "component",
+                            "server"
+                        }
+                    }
+                }
+            }
         })
         lspconfig["yamlls"].setup({
             capabilities = capabilities,
@@ -62,11 +72,13 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
         })
+
+        -- require('java').setup();
         lspconfig["jdtls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
-            -- cmd = { data_path .. '/mason/bin/jdtls' },
         })
+
         lspconfig["tailwindcss"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
@@ -80,6 +92,14 @@ return {
             on_attach = on_attach,
         })
         lspconfig["lemminx"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+        lspconfig["terraformls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+        lspconfig["csharp_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
